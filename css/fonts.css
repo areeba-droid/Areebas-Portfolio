@@ -1,0 +1,31 @@
+
+@font-face {
+	font-family: 'FormaBanner'; //for the headers
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 3px;
+	src: url('../fonts/FORMADJRBANNER-REGULAR-TESTING.TTF') format('truetype');
+}
+
+@font-face {
+	font-family: 'FormaBannerBold'; //for the headers
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 3px;
+	src: url('../fonts/FORMADJRBANNER-BOLD-TESTING.TTF') format('truetype');
+}
+
+@font-face {
+	font-family: 'Helvetica';
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: -10px;
+	src: url('../fonts/Helvetica.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'FormaText';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/FormaDJRText-Regular-Testing.ttf') format('truetype');
+}
