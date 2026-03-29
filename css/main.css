@@ -723,6 +723,7 @@ footer{
   margin-top: auto;
   color: var(--text-light);
   font-family: 'FormaText';
+    align-items: baseline;
 }
 
 .footer-container-links{
