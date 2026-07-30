@@ -1,26 +1,62 @@
-// this is the text scrolling animation
-const marquee = document.getElementById("marquee");
+// // this is the text scrolling animation
+// const marquee = document.getElementById("marquee");
+//
+// // Duplicate text enough times to cover the screen
+// const text = marquee.textContent;
+// while (marquee.offsetWidth < window.innerWidth * 2) {
+//   marquee.textContent += " " + text;
+// }
+//
+// let position = 0;
+// function animate() {
+//   position -= 1; // speed: change this value for faster/slower
+//   marquee.style.transform = `translateX(${position}px)`;
+//
+//   // reset position when half scrolled
+//   if (Math.abs(position) >= marquee.offsetWidth / 2) {
+//     position = 0;
+//   }
+//
+//   requestAnimationFrame(animate);
+// }
+//
+// animate();
 
-// Duplicate text enough times to cover the screen
-const text = marquee.textContent;
-while (marquee.offsetWidth < window.innerWidth * 2) {
-  marquee.textContent += " " + text;
+const arrow = document.querySelector(".scroll-indicator");
+
+let start = null;
+
+function bounce(timestamp) {
+
+  if (!start) start = timestamp;
+
+  const progress = timestamp - start;
+
+  /*
+    Math.sin creates smooth wave motion:
+    -1 → 1 → -1
+  */
+
+  const y = Math.sin(progress * 0.005) * 3;
+
+  arrow.style.transform =
+    `translateX(-50%) translateY(${y}px)`;
+
+  requestAnimationFrame(bounce);
 }
 
-let position = 0;
-function animate() {
-  position -= 1; // speed: change this value for faster/slower
-  marquee.style.transform = `translateX(${position}px)`;
+requestAnimationFrame(bounce);
 
-  // reset position when half scrolled
-  if (Math.abs(position) >= marquee.offsetWidth / 2) {
-    position = 0;
-  }
 
-  requestAnimationFrame(animate);
-}
 
-animate();
+// const arrow = document.querySelector(".scroll-indicator");
+// const nextSection = document.querySelector("#projects");
+//
+// arrow.addEventListener("click", () => {
+//   nextSection.scrollIntoView({
+//     behavior: "smooth"
+//   });
+// });
 
 
 // animate the words product designer to switch to other ones!

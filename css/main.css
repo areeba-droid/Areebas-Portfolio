@@ -48,7 +48,7 @@ body {
   color: var(--text-dark);
   font-weight: normal;
   height: 100%;
-  /* background-image: url("../images/bg-texture.png");
+  /* background-image: url("../images/bg-texture.webp");
   background-repeat: repeat;
   background-size: auto; */
   /* overflow: hidden; */
@@ -261,6 +261,19 @@ button:hover, button:focus {
   /* text-transform: lowercase; */
 }
 
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+}
+
+.chevron {
+  display: block;
+}
+
 /* Respect users who prefer reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .marquee-track { transform: none !important; transition: none !important; }
@@ -378,7 +391,7 @@ button:hover, button:focus {
 
 /* ------------- CSS Styling specifically for the Projects Page ------------- */
 .hero-section {
-  background-image: url('../images/placeholder.png');
+  background-image: url('../images/placeholder.webp');
   background-size: cover;
   background-position: center;
   position: relative;
@@ -557,20 +570,25 @@ button:hover, button:focus {
 }
 
 #AgeWell {
-  background-image: url('../images/iso-phonesmockup_agewell.png'); /* Replace with your image path */
+  background-image: url('../images/iso-phonesmockup_agewell.webp'); /* Replace with your image path */
 }
 
 #EternalDusk {
-  background-image: url('../images/EternalDusk.jpg'); /* Replace with your image path */
+  background-image: url('../images/EternalDusk.webp'); /* Replace with your image path */
 }
 
 #LaBatie {
-  background-image: url('../images/LaBatie-MainMockup.png');
+  background-image: url('../images/LaBatie-MainMockup.webp');
   background-size: cover; /* Ensures the image covers the entire area */
 }
 
 #Hemmings {
-  background-image: url('../images/HemmingsMockup.png');
+  background-image: url('../images/HemmingsMockup.webp');
+  background-size: cover; /* Ensures the image covers the entire area */
+}
+
+#Patchwork {
+  background-image: url('../images/patchwork-bg.webp');
   background-size: cover; /* Ensures the image covers the entire area */
 }
 
@@ -740,6 +758,7 @@ footer{
 
 .footer-container-text {
   font-family: 'FormaText';
+  font-size: .75rem;
   font-weight: 100;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
